@@ -43,3 +43,21 @@ function findOutlier(arr){
 
 
 */
+
+// Counting Duplicates
+function duplicateCount(string){
+  string = string.toLowerCase();
+  let count = 0;
+  let occuredOnce = '';
+  let duplicate = '';
+  for (let i = 0; i < string.length; i++) {
+    const char = string[i];
+    if (duplicate.includes(char)) {}
+    else if (occuredOnce.includes(char)) {
+      count++;
+      duplicate += char;
+    }
+    else occuredOnce += char;
+  }
+  return count;
+}
